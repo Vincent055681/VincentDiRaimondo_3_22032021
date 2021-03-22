@@ -105,9 +105,6 @@ body {
 .header__logo {
   font-family: 'Shrikhand', cursive;
   margin: 0;
-}
-
-.header__logo a {
   color: black;
 }
 
