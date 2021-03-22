@@ -1,0 +1,392 @@
+@mixin flexbox-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin button-hover {
+    opacity: 0.8;
+    cursor: pointer;
+    transition: .3s;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.6);    
+}
+
+@mixin button-style {
+    opacity: 1;
+    background: $gradient;
+    color: white;
+    padding: 0 20px;
+    border-radius: 200px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);  
+}
+
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+$gradient : linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background: #f6f6f6;
+    
+}
+
+*, ::before ::after {
+    font-family: Georgia, serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+* a {
+    text-decoration: none;
+    color: white;
+}
+
+.main {
+    margin: 0;
+    padding: 0;
+    @include flexbox-center;
+    flex-direction: column;
+}
+
+.spinner {
+    height: 100%;
+    background: white;
+    margin: auto;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 20;
+    animation: spinner 2s linear ;
+    visibility: hidden;
+    &__border {
+        @include flexbox-center;
+        border: 10px solid transparent;
+        border-top: 10px solid $color-primary;
+        border-bottom: 10px solid $color-secondary;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        margin: auto;
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        animation: spinner-border 2s linear ;
+        z-index: 10;
+        visibility: hidden;
+    }
+    &__center {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: $color-tertiary;
+    
+    }
+}
+
+.header {
+    box-shadow: 0px 5px 6px 0px rgba(0,0,0,0.20);
+    position: relative;
+    @include flexbox-center();
+    height: 80px;
+    width: 100%;
+    &__logo {
+        font-family: 'Shrikhand', cursive;
+        margin: 0;
+        & a {
+            color: black
+        }
+    }
+}
+
+.location {
+    @include flexbox-center();
+    background: #f3f3f3;
+    color: #7a7a7a;
+
+    &__city {
+        margin-left: 13px;
+        font-weight: 400;
+    }
+}   
+
+
+.hero {
+    background: #fafafa;
+    width: 100%;
+    &__container {
+        width: 100%;
+        padding: 20px;
+        @include flexbox-center();
+        flex-direction: column;
+        padding: 50px 0;
+    }
+    &__title {
+        text-align: center;
+        max-width: 250px;
+        margin: 0;
+    }
+    &__text {
+        text-align: center;
+    }
+    &__button {
+        @include button-style;
+        &:hover {
+            @include button-hover;
+        }
+    }
+}
+
+.process__contain {
+    padding: 25px 0;
+    width: 100%;
+    background: white;
+    @include flexbox-center;
+    flex-direction: column;
+}
+.process {
+    width: 95%;
+    max-width: 1200px;
+    background-color: white;
+    padding: 0 ;   
+    display: flex;
+    flex-direction: column ;
+    &__title {
+        margin: 0;
+    }
+    &__step {
+        display: flex;
+        align-items: center;
+        background: #f6f6f6;
+        height: auto;
+        width: auto;
+        margin: 10px 20px;
+        border-radius: 20px;
+        position: relative;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.16);
+        &:hover {
+            @include button-hover;
+            background: lighten(#f7f7f7, 3%);
+        }
+    }
+        &__number {
+                background-color: $color-primary;
+                color: white;
+                position: absolute;
+                padding: 3px 8px 3px 8px;
+                border-radius: 500px;
+                transform: translateX(-50%);
+            }
+        &__icon {
+            color: #7E7E7E;
+            margin: 0 20px;
+        }
+    &__steps {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+.restaurants {
+    margin: 0;
+    background: #f6f6f6;
+    padding: 20px;
+    max-width: 1200px;
+    @include flexbox-center;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.restaurant {
+    &__cards {
+        display: grid;
+        grid-template-rows: repeat(4,1fr) ;
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+        padding: 20px;
+        
+        
+    }
+    &__card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        width: 100%;
+        border-radius: 20px;
+        transform: scale(1.0);
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+        &-new {
+            @include flexbox-center;;
+            position: absolute;
+            background: #99e2d0;
+            top: 20px; right: 20px;
+            & p {
+                color: #1b6150;
+                padding: 10px 20px;
+                margin: 0;
+            }
+        }
+        &:hover {
+            transition: .5s;
+            transform: scale(1.02);
+            box-shadow: 0px 0px 10px 2px rgba(147, 86, 220,0.6);
+        }
+        &-image {
+            width: 100%;
+            height: 190px;
+            & > img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 20px 20px 0 0;
+            }
+        }
+    }
+    &__block {
+        background: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 90px;
+        border-radius: 0 0 20px 20px;
+        &-info {
+            color: black;
+            margin-left: 20px;
+            & > :first-child {
+                font-weight: 700;
+            }
+        }
+        &-hearth {
+            @include flexbox-center;
+            margin-right: 20px;
+            width: 30px;
+        }
+        .heart {
+            width: 30px;
+            stroke-width: 30;
+            stroke: black;
+            fill: white;
+            cursor: pointer;
+          }
+          .heart-empty {
+          position: absolute;
+          fill: url(#text-fill);
+        }
+        .heart-full {
+            width: 50px;
+            position: relative; 
+            &:hover {
+              opacity: 0;
+              transition: 1s;
+            }
+        }
+    }
+}
+
+
+.footer {
+    width: 100%;
+    background-color: #353535;
+    @include flexbox-center;
+    &__bloc {
+        display: inline;
+        padding: 0 40px;
+        width: 100%;
+        max-width: 1200px;
+        & .logo {
+            font-family: 'Shrikhand', cursive;
+            color: white;
+            font-size: 20px;
+            padding: 15px 0;
+        }
+        &-links {
+            display: inline-flex;
+            flex-direction: column;
+            width: auto;
+        }
+        &-link {
+            display: inline-flex;
+            align-items: center;
+            flex-direction: row;
+            text-align: center;
+            color: white;
+            height: 30px;
+            cursor: pointer;
+            &:hover .footer__bloc-link__title {
+                text-decoration: underline;
+            }
+            & i {
+             margin-right: 7px;
+            }
+            &__title {
+                font-size: 16px;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+// Animation Loading spinner //
+
+@keyframes spinner {
+    0% {
+        visibility: visible;
+        opacity: 0.9;
+    }
+    70% {
+        opacity: 0.9;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes spinner-border {
+    0% {
+        visibility: visible;
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(360deg);
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+// Responsive //
+
+@media screen and (min-width: 800px) {
+    .restaurant {
+        &__cards {
+            display: grid;
+            grid-template-rows: 1fr 1fr ;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+        }
+    }
+    .process__step {
+        width: 100%;
+    }
+    .process__steps {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        width: 100%;
+    }
+}
+
+
