@@ -142,6 +142,7 @@ header .header__logo a {
 .menu__header__heart .heart-empty {
   position: absolute;
   fill: url(#text-fill);
+  stroke: none;
 }
 
 .menu__header__heart .heart-full {

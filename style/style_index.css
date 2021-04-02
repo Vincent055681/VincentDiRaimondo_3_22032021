@@ -424,6 +424,7 @@ body {
 .restaurant__block .heart-empty {
   position: absolute;
   fill: url(#text-fill);
+  stroke: none;
 }
 
 .restaurant__block .heart-full {

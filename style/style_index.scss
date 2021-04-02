@@ -273,6 +273,7 @@ body {
           .heart-empty {
           position: absolute;
           fill: url(#text-fill);
+          stroke: none;
         }
         .heart-full {
             width: 50px;
@@ -327,10 +328,6 @@ body {
         }
     }
 }
-
-
-
-
 
 
 // Animation Loading spinner //
