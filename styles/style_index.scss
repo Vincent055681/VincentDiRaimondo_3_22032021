@@ -382,6 +382,18 @@ body {
         flex-direction: row;
         width: 100%;
     }
+
+    .footer {
+        &__bloc {
+            margin-bottom: 15px;
+            &-links {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: row;
+                max-width: 900px;
+            }
+        }
+    }
 }
 
 
