@@ -151,8 +151,8 @@ header .header__logo a {
 
 .menu__header__heart .heart-empty:hover {
   opacity: 0;
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .menu__grid {
