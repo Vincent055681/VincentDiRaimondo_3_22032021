@@ -421,21 +421,21 @@ body {
   cursor: pointer;
 }
 
-.restaurant__block .heart-empty {
+.restaurant__block .heart-full {
   position: absolute;
   fill: url(#text-fill);
   stroke: none;
 }
 
-.restaurant__block .heart-full {
+.restaurant__block .heart-empty {
   width: 50px;
   position: relative;
 }
 
-.restaurant__block .heart-full:hover {
+.restaurant__block .heart-empty:hover {
   opacity: 0;
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .footer {

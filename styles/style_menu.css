@@ -139,17 +139,17 @@ header .header__logo a {
   cursor: pointer;
 }
 
-.menu__header__heart .heart-empty {
+.menu__header__heart .heart-full {
   position: absolute;
   fill: url(#text-fill);
   stroke: none;
 }
 
-.menu__header__heart .heart-full {
+.menu__header__heart .heart-empty {
   position: relative;
 }
 
-.menu__header__heart .heart-full:hover {
+.menu__header__heart .heart-empty:hover {
   opacity: 0;
   -webkit-transition: 1s;
   transition: 1s;

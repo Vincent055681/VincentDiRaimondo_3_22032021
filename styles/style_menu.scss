@@ -119,12 +119,12 @@ header {
                 fill: white;
                 cursor: pointer;
               }
-              .heart-empty {
+              .heart-full {
               position: absolute;
               fill: url(#text-fill);
               stroke: none;
               }
-              .heart-full {
+              .heart-empty {
                 position: relative; 
                 &:hover {
                   opacity: 0;
