@@ -361,31 +361,27 @@ header .header__logo a {
   }
 }
 
-@-webkit-keyframes scale-up-center {
+@-webkit-keyframes opacity {
   0% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
+    opacity: 0;
   }
   100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    opacity: 1;
   }
 }
 
-@keyframes scale-up-center {
+@keyframes opacity {
   0% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
+    opacity: 0;
   }
   100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    opacity: 1;
   }
 }
 
 .scale-up-center {
-  -webkit-animation: scale-up-center 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
-          animation: scale-up-center 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+  -webkit-animation: opacity 1s both;
+          animation: opacity 1s both;
 }
 
 #case-1 {
@@ -429,8 +425,8 @@ header .header__logo a {
 }
 
 #case-9 {
-  -webkit-animation-delay: 0.8s;
-          animation-delay: 0.8s;
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
 }
 
 .footer {
