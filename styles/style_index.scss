@@ -69,7 +69,7 @@ body {
         width: 100px;
         height: 100px;
         margin: auto;
-        position: absolute;
+        position: fixed;
         top: 0; left: 0; right: 0; bottom: 0;
         animation: spinner-border 2s linear ;
         z-index: 10;
@@ -203,7 +203,6 @@ body {
         grid-template-columns: 1fr;
         grid-gap: 20px;
         padding: 20px;
-        
         
     }
     &__card {
