@@ -379,7 +379,7 @@ header .header__logo a {
   }
 }
 
-.scale-up-center {
+.appears-with-opacity {
   -webkit-animation: opacity 1s both;
           animation: opacity 1s both;
 }
