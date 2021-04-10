@@ -299,7 +299,7 @@ body {
 .restaurant__cards {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: (1fr)[4];
+  -ms-grid-rows: 1fr [4];
       grid-template-rows: repeat(4, 1fr);
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
