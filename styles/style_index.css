@@ -4,7 +4,7 @@ body {
   background: #f6f6f6;
 }
 
-*, ::before ::after {
+*, ::before  ::after {
   font-family: Georgia, serif;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
